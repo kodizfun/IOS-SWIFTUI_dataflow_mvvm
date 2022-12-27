@@ -9,8 +9,40 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var note: Int = 10
+    
+    var bckColor: Color {
+        if note < 10 {
+            return Color.red
+        } else if note >= 10 && note < 12 {
+            return Color.blue
+        } else {
+            return Color.green
+        }
+    }
+    
+    var message: String {
+        if note < 10 {
+            return "Besoin de travailler encore"
+        } else if note >= 10 && note < 12 {
+            return "Niveau passable"
+        } else {
+            return "Bon niveau"
+        }
+    }
+    
     var body: some View {
-        Text("")
+        ZStack {
+            bckColor.ignoresSafeArea()
+            VStack {
+                Text("\(note)/20")
+                Text(message)
+                Stepper("",value: $note, in: 0...20)
+                    .accentColor(.white)
+                    .labelsHidden()
+            }.font(.title)
+                .foregroundColor(.white)
+        }
     }
     
 }
