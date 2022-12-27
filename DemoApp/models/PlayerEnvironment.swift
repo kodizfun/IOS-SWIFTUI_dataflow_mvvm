@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PlayerViewModel: ObservableObject {
+class PlayerEnvironment: ObservableObject {
     @Published var life: Int = 6
     @Published var score: Int = 0
     @Published var ammo: Int = 20

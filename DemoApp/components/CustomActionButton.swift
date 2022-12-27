@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CustomActionButton: View {
     
-    @ObservedObject var viewModel: PlayerViewModel
+    @EnvironmentObject var pe: PlayerEnvironment
+    
     var buttonTitle: String
     var actionType: ActionType
     
@@ -30,17 +31,17 @@ struct CustomActionButton: View {
     func handleClick() {
         switch actionType {
         case .gainOneLife:
-            viewModel.life += 1
+            pe.life += 1
         case .loseOneLife:
-            viewModel.life -= 1
+            pe.life -= 1
         case .gainTenPoints:
-            viewModel.score += 10
+            pe.score += 10
         case .loseTenPoints:
-            viewModel.score -= 10
+            pe.score -= 10
         case .pickOneAmmo:
-            viewModel.ammo += 1
+            pe.ammo += 1
         case .useOneAmmo:
-            viewModel.ammo -= 1
+            pe.ammo -= 1
         }
     }
 }
@@ -48,7 +49,6 @@ struct CustomActionButton: View {
 struct CustomActionButton_Previews: PreviewProvider {
     static var previews: some View {
         CustomActionButton(
-            viewModel: PlayerViewModel(),
             buttonTitle: "Gagne une vie",
             actionType: .gainOneLife
         )

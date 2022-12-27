@@ -9,13 +9,13 @@ import SwiftUI
 
 struct PlayerData: View {
     
-    @ObservedObject var viewModel: PlayerViewModel
+    @EnvironmentObject var pe: PlayerEnvironment
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Life : \(viewModel.life)")
-            Text("Score : \(viewModel.score)")
-            Text("Ammo : \(viewModel.ammo)")
+            Text("Life : \(pe.life)")
+            Text("Score : \(pe.score)")
+            Text("Ammo : \(pe.ammo)")
         }
         .font(.title)
         .bold()
@@ -28,6 +28,6 @@ struct PlayerData: View {
 
 struct PlayerData_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerData(viewModel: PlayerViewModel())
+        PlayerData()
     }
 }

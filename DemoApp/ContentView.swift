@@ -9,57 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject var vm = PlayerViewModel()
-    
     var body: some View {
-        ZStack {
-            if vm.life > 0 {
-                // Affiche les infos
-                VStack {
-                    PlayerData(viewModel: vm)
-                    Spacer()
-                    CustomActionButton(
-                        viewModel: vm,
-                        buttonTitle: "Gagner une vie",
-                        actionType: .gainOneLife
-                    )
-                    CustomActionButton(
-                        viewModel: vm,
-                        buttonTitle: "Perdre une vie",
-                        actionType: .loseOneLife
-                    )
-                    CustomActionButton(
-                        viewModel: vm,
-                        buttonTitle: "Gagner dix points",
-                        actionType: .gainTenPoints
-                    )
-                    CustomActionButton(
-                        viewModel: vm,
-                        buttonTitle: "Perdre dix points",
-                        actionType: .loseTenPoints
-                    )
-                    CustomActionButton(
-                        viewModel: vm,
-                        buttonTitle: "Ramasser une munition",
-                        actionType: .pickOneAmmo
-                    )
-                    CustomActionButton(
-                        viewModel: vm,
-                        buttonTitle: "Utiliser une munition",
-                        actionType: .useOneAmmo
-                    )
-                    Spacer()
-                }
-            } else {
-                // Fin de partie
-                VStack {
-                    Text("Vous êtes mort 🤪").font(.title)
-                    Text("⚰️").font(.title)
-                    
-                    Button("REJOUER"){
-                        vm.playAgain()
-                    }
-                }
+
+        TabView {
+            ScreenA().tabItem {
+                Label("Screen A", systemImage: "paperplane")
+            }
+            ScreenB().tabItem {
+                Label("Screen B", systemImage: "tortoise")
+            }
+            ScreenC().tabItem {
+                Label("Screen C", systemImage: "heart")
             }
         }
         
