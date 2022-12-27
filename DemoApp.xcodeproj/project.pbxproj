@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1208E8E3295B6B7400EC8073 /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208E8E2295B6B7400EC8073 /* PlayerData.swift */; };
+		1208E8E6295B6BFA00EC8073 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208E8E5295B6BFA00EC8073 /* PlayerViewModel.swift */; };
+		1208E8E8295B6D6300EC8073 /* CustomActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208E8E7295B6D6300EC8073 /* CustomActionButton.swift */; };
+		1208E8EB295B6F7300EC8073 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208E8EA295B6F7300EC8073 /* Enums.swift */; };
 		122C7E91293900D000906D8E /* DemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C7E90293900D000906D8E /* DemoAppApp.swift */; };
 		122C7E93293900D000906D8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C7E92293900D000906D8E /* ContentView.swift */; };
 		122C7E95293900D100906D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 122C7E94293900D100906D8E /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1208E8E2295B6B7400EC8073 /* PlayerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
+		1208E8E5295B6BFA00EC8073 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		1208E8E7295B6D6300EC8073 /* CustomActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionButton.swift; sourceTree = "<group>"; };
+		1208E8EA295B6F7300EC8073 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		122C7E8D293900D000906D8E /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		122C7E90293900D000906D8E /* DemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppApp.swift; sourceTree = "<group>"; };
 		122C7E92293900D000906D8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +40,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1208E8E1295B6ACA00EC8073 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				1208E8E2295B6B7400EC8073 /* PlayerData.swift */,
+				1208E8E7295B6D6300EC8073 /* CustomActionButton.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		1208E8E4295B6BDC00EC8073 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				1208E8E5295B6BFA00EC8073 /* PlayerViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		1208E8E9295B6F6400EC8073 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				1208E8EA295B6F7300EC8073 /* Enums.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		122C7E84293900D000906D8E = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +84,9 @@
 		122C7E8F293900D000906D8E /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				1208E8E9295B6F6400EC8073 /* models */,
+				1208E8E4295B6BDC00EC8073 /* viewmodels */,
+				1208E8E1295B6ACA00EC8073 /* components */,
 				122C7E90293900D000906D8E /* DemoAppApp.swift */,
 				122C7E92293900D000906D8E /* ContentView.swift */,
 				122C7E94293900D100906D8E /* Assets.xcassets */,
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1208E8E3295B6B7400EC8073 /* PlayerData.swift in Sources */,
+				1208E8E6295B6BFA00EC8073 /* PlayerViewModel.swift in Sources */,
 				122C7E93293900D000906D8E /* ContentView.swift in Sources */,
 				122C7E91293900D000906D8E /* DemoAppApp.swift in Sources */,
+				1208E8EB295B6F7300EC8073 /* Enums.swift in Sources */,
+				1208E8E8295B6D6300EC8073 /* CustomActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
